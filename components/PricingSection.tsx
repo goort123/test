@@ -6,6 +6,7 @@ import Timer from './Timer'
 import { useGetTariffsQuery } from '@/lib/api/tariffsApi'
 import { Sparkle } from 'lucide-react'
 import type { Tariff } from '@/lib/types/tariff'
+import { getAssetPath } from '@/lib/utils'
 
 interface TariffWithDiscount extends Tariff {
   uniqueId: string
@@ -89,7 +90,7 @@ export default function PricingSection() {
           <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
             <div className="relative w-full md:w-[380px] flex-shrink-0 mx-auto md:mx-0 max-w-[124px] md:max-w-none">
               <Image
-                src="/assets/hero-image.png"
+                src={getAssetPath('/assets/hero-image.png')}
                 alt="Hero"
                 width={380}
                 height={767}
